@@ -8,12 +8,12 @@
 ## How to Use
 
 1. Run the script.
-2. Choose an option from the menu:
-   - Encrypt message.
-   - Decrypt message.
-   - Destroy data.
+2. Choose option:
+   - Encrypt message
+   - Decrypt message
+   - Destroy info
 
 ## Requirements
 
 - Python 3.12.6
-`pip install cryptography`
+```pip install cryptography```
