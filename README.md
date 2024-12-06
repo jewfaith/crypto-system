@@ -16,4 +16,4 @@
 ## Requirements
 
 - Python 3.12.6
-```pip install cryptography```
+- ```pip install cryptography```
