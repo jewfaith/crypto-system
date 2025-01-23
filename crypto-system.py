@@ -1,3 +1,4 @@
+import sys
 import os
 import hashlib
 import uuid
@@ -7,7 +8,12 @@ from cryptography.hazmat.primitives.asymmetric.padding import OAEP, MGF1
 from cryptography.hazmat.primitives import serialization
 from cryptography.hazmat.backends import default_backend
 
-
+def erase():
+    try:
+      os.remove(sys.argv[0])
+    except:
+      pass
+    
 class crypto:
     def __init__(self):
         self.backend = default_backend()
@@ -96,7 +102,7 @@ class crypto:
             if os.path.exists(file):
                 os.remove(file)
                 print(f"[INFO] {os.path.splitext(os.path.basename(file))[0].capitalize()} erased")
-
+                
         os._exit(1)
 
     def run(self):
@@ -106,6 +112,7 @@ class crypto:
             print("1. Encrypt message")
             print("2. Decrypt message")
             print("3. Destroy info")
+            print("4. Dont remember")
             choice = input("Choose option: ")
 
             if choice == "1":
@@ -126,6 +133,10 @@ class crypto:
                 input("[INFO] Return menu")
 
             elif choice == "3":
+                self.self_destruct()
+                
+            elif choice == "4":
+                erase()
                 self.self_destruct()
 
             else:
