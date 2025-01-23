@@ -16,5 +16,5 @@
 
 ## Requirements
 
-- Python 3.12.6+
+- ```Python 3.12.6+```
 - ```pip install cryptography```
