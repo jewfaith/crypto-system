@@ -12,6 +12,7 @@
    - Encrypt message
    - Decrypt message
    - Destroy info
+   - Dont remember
 
 ## Requirements
 
